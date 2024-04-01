@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        table{
+        border:0px solid black;
+		  position: absolute;
+		  left: 50%;
+		  top: 50%;
+		  transform: translate(-50%, -50%);
+        }
+        th, td {
+            border:0px solid black;
+            
+        }
+        </style>
+        <style>
+            body {
+              background-image: url('maunen.png');
+            }
+            </style>
+        <body>
+           
+        <center><table style="width:500px">
+            <tr>
+                <td colspan="3">
+                    <center><h3><font face="Arial" >THỜI GIAN BÂY GIỜ LÀ :</font></h3></center>
+                </td>
+            </tr>
+            <tr>
+                <td style ="height:100px;background-color: #C29EAC;font-size: 40px;"><center id = "gio"></center></td>
+                <td style ="height:100px;background-color: #C29EAC;font-size: 40px;"><center id = "phut"></center></td>
+                <td style ="height:100px;background-color: #C29EAC;font-size: 40px;"><center id = "giay"></center></td>
+            </tr>
+        
+          <tr>
+            <th style="width:10%;background-color: #956671">Giờ</th>
+            <th style="width:10%;background-color: #956671">Phút</th>
+            <th style="width:10%;background-color: #956671">Giây</th>
+          </tr>
+        
+         
+        </table></center>
+        
+
+        
+    </body>
+</html>
+<script>
+function clock(){
+   var timer = new Date();
+   var hour = timer.getHours();
+   var minute = timer.getMinutes();
+   var second = timer.getSeconds();
+   if(hour < 10) {
+       hour = "0" + hour;
+   }
+   if(minute < 10) {
+       minute = "0" + minute;
+   }
+   if(second < 10) {
+       second = "0" + second;
+   }
+   document.getElementById("gio").innerHTML = hour;
+   document.getElementById("phut").innerHTML = minute;
+   document.getElementById("giay").innerHTML = second;
+}
+setInterval("clock()",1000);
+</script>
+</html>
